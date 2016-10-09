@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBlocks_project_file>
+	<EmBlocksVersion release="2.20" revision="1" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="STM32F4_Ethernet" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Build>
+			<Target title="STM32F4_Ethernet">
+				<Option output="C:\EF4Ethernet\STM32F4_Ethernet.elf" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Device>
+					<Add option="$device=cortex-m4" />
+					<Add option="$fpu=fpv4-sp-d16" />
+					<Add option="$lscript=.\STM32F4_Ethernet.ld" />
+				</Device>
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-ffunction-sections" />
+					<Add option="-mfloat-abi=hard" />
+					<Add option="-g" />
+					<Add option="-O0" />
+					<Add option="-DSTM32F407VG" />
+					<Add option="-DSTM32F4XX" />
+					<Add option="-DUSE_STDPERIPH_DRIVER" />
+					<Add option="-D__FPU_USED" />
+					<Add option="-DHSE_VALUE=8000000" />
+					<Add directory="." />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="STM32F4x7_ETH_Driver\inc\lwip" />
+			<Add directory="cmsis_lib\include" />
+			<Add directory="cmsis" />
+			<Add directory="cmsis_boot" />
+			<Add directory="Ethernet\include" />
+			<Add directory="STM32F4x7_ETH_Driver\src\netif\ppp" />
+			<Add directory="STM32F4x7_ETH_Driver\inc\lwip\arch" />
+			<Add directory="STM32F4x7_ETH_Driver\inc\netif" />
+			<Add directory="STM32F4x7_ETH_Driver\inc" />
+		</Compiler>
+		<Unit filename="Ethernet\include\fs.h" />
+		<Unit filename="Ethernet\include\fsdata.h" />
+		<Unit filename="Ethernet\include\httpd.h" />
+		<Unit filename="Ethernet\include\httpd_structs.h" />
+		<Unit filename="Ethernet\include\lwipopts.h" />
+		<Unit filename="Ethernet\include\netconf.h" />
+		<Unit filename="Ethernet\include\serial_debug.h" />
+		<Unit filename="Ethernet\include\stm32f4x7_eth_bsp.h" />
+		<Unit filename="Ethernet\include\stm32f4x7_eth_conf.h" />
+		<Unit filename="Ethernet\source\fs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Ethernet\source\httpd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Ethernet\source\httpd_cgi_ssi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Ethernet\source\netconf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Ethernet\source\serial_debug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Ethernet\source\stm32f4x7_eth_bsp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\inc\ethernetif.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\api.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\api_msg.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\arch.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\arch\bpstruct.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\arch\cc.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\arch\cpu.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\arch\epstruct.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\arch\init.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\arch\lib.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\arch\perf.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\arch\sys_arch.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\autoip.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\debug.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\def.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\dhcp.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\dns.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\err.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\icmp.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\igmp.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\inet.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\inet_chksum.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\init.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\ip.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\ip_addr.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\ip_frag.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\mem.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\memp.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\memp_std.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\netbuf.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\netdb.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\netif.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\netifapi.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\opt.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\pbuf.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\raw.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\sio.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\snmp.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\snmp_asn1.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\snmp_msg.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\snmp_structs.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\sockets.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\stats.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\sys.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\tcp.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\tcpip.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\lwip\udp.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\netif\etharp.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\netif\loopif.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\netif\ppp_oe.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\netif\slipif.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\stm32f4x7_eth.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\inc\stm32f4x7_eth_conf_template.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\api\api_lib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\api\api_msg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\api\err.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\api\netbuf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\api\netdb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\api\netifapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\api\sockets.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\api\tcpip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\dhcp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\dns.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\ipv4\autoip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\ipv4\icmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\ipv4\igmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\ipv4\inet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\ipv4\inet_chksum.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\ipv4\ip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\ipv4\ip_addr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\ipv4\ip_frag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\mem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\memp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\netif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\pbuf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\raw.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\snmp\asn1_dec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\snmp\asn1_enc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\snmp\mib2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\snmp\mib_structs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\snmp\msg_in.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\snmp\msg_out.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\stats.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\sys.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\tcp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\tcp_in.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\tcp_out.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\core\udp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\ethernetif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\etharp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\loopif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\auth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\auth.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\chap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\chap.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\chpms.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\chpms.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\fsm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\fsm.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\ipcp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\ipcp.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\lcp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\lcp.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\magic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\magic.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\md5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\md5.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\pap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\pap.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\ppp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\ppp.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\ppp_oe.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\pppdebug.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\randm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\randm.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\vj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\vj.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\ppp\vjbsdhdr.h" />
+		<Unit filename="STM32F4x7_ETH_Driver\src\netif\slipif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F4x7_ETH_Driver\src\stm32f4x7_eth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis\core_cm4.h" />
+		<Unit filename="cmsis\core_cm4_simd.h" />
+		<Unit filename="cmsis\core_cmFunc.h" />
+		<Unit filename="cmsis\core_cmInstr.h" />
+		<Unit filename="cmsis_boot\startup\startup_stm32f4xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis_boot\stm32f4xx.h" />
+		<Unit filename="cmsis_boot\stm32f4xx_conf.h" />
+		<Unit filename="cmsis_boot\system_stm32f4xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis_boot\system_stm32f4xx.h" />
+		<Unit filename="cmsis_lib\include\misc.h" />
+		<Unit filename="cmsis_lib\include\stm32f4xx_adc.h" />
+		<Unit filename="cmsis_lib\include\stm32f4xx_dac.h" />
+		<Unit filename="cmsis_lib\include\stm32f4xx_exti.h" />
+		<Unit filename="cmsis_lib\include\stm32f4xx_gpio.h" />
+		<Unit filename="cmsis_lib\include\stm32f4xx_rcc.h" />
+		<Unit filename="cmsis_lib\include\stm32f4xx_syscfg.h" />
+		<Unit filename="cmsis_lib\include\stm32f4xx_usart.h" />
+		<Unit filename="cmsis_lib\source\misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis_lib\source\stm32f4xx_adc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis_lib\source\stm32f4xx_dac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis_lib\source\stm32f4xx_exti.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis_lib\source\stm32f4xx_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis_lib\source\stm32f4xx_rcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis_lib\source\stm32f4xx_syscfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis_lib\source\stm32f4xx_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.h" />
+		<Unit filename="stdio\printf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f4_discovery.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f4_discovery.h" />
+		<Unit filename="stm32f4xx_it.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f4xx_it.h" />
+		<Unit filename="syscalls\syscalls.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="STM32F4_Ethernet" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description=".\STM32F40x.svd" dont_start_server="false" backoff_time="1000" options="2" reg_filter="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
+							<option opt_id="ID_ALL_MODE_DEBUG" opt_value="0" />
+							<option opt_id="ID_DEV_ADDR" opt_value="" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+		</Extensions>
+	</Project>
+</EmBlocks_project_file>
